@@ -1,0 +1,4 @@
+[package]
+name = "pub-post"
+version = "0.0.0"
+entrypoint = "lib.typ"

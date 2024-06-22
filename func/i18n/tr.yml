@@ -1,0 +1,58 @@
+toggleMenu:
+  other: "Menüyü aç/kapa"
+
+darkMode:
+  other: "Koyu Tema"
+
+list:
+  page:
+    other: "{{ .Count }} sayfa"
+  section:
+    other: "Bölüm"
+  subsection:
+    other: "Alt Bölüm"
+
+article:
+  back:
+    other: "Geri"
+  tableOfContents:
+    other: "İçerikler"
+  relatedContent:
+    other: "İlgili içerik"
+  lastUpdatedOn:
+    other: "Güncellenme tarihi"
+  readingTime:
+    other: "{{ .Count }} dakikada okunur"
+
+notFound:
+  title:
+    other: "Bulunamadı"
+  subtitle:
+    other: "Bu sayfa yok"
+
+widget:
+  archives:
+    title:
+      other: "Eski Kayıtlar"
+    more:
+      other: "Daha fazla"
+  tagCloud:
+    title:
+      other: "Etiketler"
+  categoriesCloud:
+    title:
+      other: "Ulamlar"
+
+search:
+  title:
+    other: "Arama"
+  placeholder:
+    other: Bir şey yazın...
+  resultTitle:
+    other: "#PAGES_COUNT sayfa (#TIME_SECONDS saniyede)"
+
+footer:
+  builtWith:
+    other: ""
+  designedBy:
+    other: ""
