@@ -1,0 +1,3 @@
+[submodule "func/theme"]
+	path = func/theme
+	url = https://github.com/CaiJimmy/hugo-theme-stack/

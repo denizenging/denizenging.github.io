@@ -1,0 +1,191 @@
+params:
+    sidebar:
+        emoji: "✍🏻"
+        avatar:
+            src: "img/avatar.jpg"
+    footer:
+        since: 2023
+    widgets:
+        homepage:
+            - type: "search"
+            - type: "categories"
+            - type: "tag-cloud"
+            - type: "archives"
+        page:
+            - type: "toc"
+            - type: "categories"
+            - type: "tag-cloud"
+            - type: "archives"
+    article:
+        toc: true
+        license:
+            enabled: true
+
+menu:
+    social:
+        - name: "Orchid iD"
+          url: "https://orcid.org/0009-0004-9445-8502"
+          weight: 1
+          params:
+              icon: "orcid"
+        - name: "GitHub"
+          url: "https://github.com/denizenging"
+          weight: 2
+          params:
+              icon: "github"
+        - name: "LinkedIn"
+          url: "https://linkedin.com/in/denizenging/"
+          weight: 3
+          params:
+              icon: "linkedin"
+        - name: "X/Twitter"
+          url: "https://x.com/denizenging"
+          weight: 4
+          params:
+              icon: "x"
+        - name: "YouTube"
+          url: "https://www.youtube.com/@denizenging"
+          weight: 5
+          params:
+              icon: "youtube"
+        - name: "Instagram"
+          url: "https://instagram.com/denizenging/"
+          weight: 6
+          params:
+              icon: "instagram"
+
+defaultContentLanguage: en
+
+languages:
+    en:
+        params:
+            description: "A personal website, mainly about linguistics, programming, and philosophy"
+            sidebar:
+                subtitle: "A site about linguistics, programming, and philosophy!"
+            article:
+                license:
+                    default: "Licensed under CC BY-NC-SA 4.0"
+            footer:
+                customText: "Deniz's Site: Profound, just like a Sea"
+        title: "Deniz Engin"
+        permalinks:
+            page:
+                post: /:slug
+                page: /page/:slug
+            section:
+                post: /post/
+
+        languageName: "English"
+        languageCode: "en-US"
+        languageDirection: "ltr"
+        weight: 1
+
+    tr:
+        params:
+            description: "Başlıca dilbilim, yazılım ve felseyle ilgilenen, kişisel bir web yeri."
+            sidebar:
+                subtitle: "Dilbilim, yazılım ve felsefeyle ilgi bir yer!"
+            article:
+                license:
+                    default: "CC BY-NC-SA 4.0 ile lisanslanmıştır"
+            footer:
+                customText: "Deniz'in Yeri: Deniz gibi Engin"
+        title: "Deniz Engin"
+        permalinks:
+            page:
+                post: /:slug
+                page: /sayfa/:slug
+            section:
+                post: /gönderi/
+
+        languageName: "Türkçe"
+        languageCode: "tr-TR"
+        languageDirection: "ltr"
+        weight: 2
+
+    de:
+        disabled: true
+        languageName: "Deutsch"
+        languageCode: "de-DE"
+        languageDirection: "ltr"
+        weight: 3
+
+    ja:
+        disabled: true
+        languageName: "Nihongo"
+        languageCode: "ja"
+        languageDirection: "ltr"
+        weight: 4
+
+    eo:
+        disabled: true
+        languageName: "Esperanto"
+        languageCode: "eo"
+        languageDirection: "ltr"
+        weight: 5
+
+    es:
+        disabled: true
+        languageName: "Español"
+        languageCode: "es"
+        languageDirection: "ltr"
+        weight: 6
+
+# For some reason, these don't work as mounts.
+themesDir: "func"
+theme: "theme"
+
+module:
+    mounts:
+        - source: "post"
+          target: "content/post"
+
+        - source: "page/home"
+          target: "content/"
+
+        - source: "page/about"
+          target: "content/page/about"
+
+        - source: "page/works"
+          target: "content/page/works"
+
+        - source: "page/links"
+          target: "content/page/links"
+
+        - source: "page/search"
+          target: "content/page/search"
+
+        - source: "page/archive"
+          target: "content/page/archives"
+
+        - source: "func/layout"
+          target: "layouts"
+
+        - source: "func/i18n"
+          target: "i18n"
+
+        - source: "func/asset/icon"
+          target: "assets/icons"
+
+        - source: "func/asset/img"
+          target: "assets/img"
+
+# The only reason for this is `date` field is used for pandoc
+# in `year-day-month` format only. So I created a custom field
+# for my own purposes.
+frontmatter:
+    date:
+        - "datetime"
+        - ":default"
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+
+publishDir: .publish
+caches:
+    assets:
+        dir: :cacheDir/_gen
+    images:
+        dir: :cacheDir/_gen
